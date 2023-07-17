@@ -13,14 +13,13 @@ function Home() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.gridContainer}>
+      <section className={styles.gridContainer}>
         {/* itère sur chaque elem  et retourne un composant Logement*/}
         {logements.map((logement) => (
           <Logement key={logement.id} data={logement} />
         ))}
-      </div>
-    </div>
+      </section>
+   
   );
 }
 

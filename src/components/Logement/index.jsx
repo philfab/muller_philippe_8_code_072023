@@ -1,11 +1,13 @@
-import styles from './Logement.module.css';
+import styles from "./Logement.module.css";
 
 function Logement({ data }) {
   return (
-    <div className={styles.logementImage}>
+    <figure className={styles.figure}>
       <img src={data.cover} alt={data.title} />
-      <h2>{data.title}</h2>
-    </div>
+      <figcaption>
+        <p>{data.title}</p>
+      </figcaption>
+    </figure>
   );
 }
 

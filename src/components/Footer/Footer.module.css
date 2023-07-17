@@ -3,18 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 20px 0;
   background-color: black;
   color: white;
   text-align: center;
   width: 100%;
 }
 
-.logo {
-  max-width: 80px;
-  height: auto;
-}
 
-.copyright {
-  margin-top: 10px;
-}
