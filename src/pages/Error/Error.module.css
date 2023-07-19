@@ -1,0 +1,25 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error h1 {
+  margin: 20px;
+  color: var(--main-red);
+  font-size: 10rem;
+}
+
+.error p {
+   font-size: 1.5rem;
+}
+
+.activeLink {
+  text-decoration: underline;
+  color: var(--main-red);
+}
+
+.error p ,.activeLink{
+    margin-bottom: 100px;
+}
