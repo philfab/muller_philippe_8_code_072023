@@ -1,9 +1,9 @@
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+
   background-color: black;
   color: white;
   text-align: center;
@@ -11,3 +11,6 @@
 }
 
 
+footer img{
+  padding-top : 20px;
+}

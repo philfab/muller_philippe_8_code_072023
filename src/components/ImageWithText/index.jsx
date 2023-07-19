@@ -12,21 +12,22 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 180px;
-  border-radius: 10px;
+  border-radius: 20px;
   object-fit: cover;
+  filter: brightness(${props => props.brightness}%);
 `;
 
-const ImageText = styled.h1`
+const ImageText = styled.p`
   position: absolute;
   color: white;
   font-size: 2rem;
   text-align: center;
 `;
 
-function ImageWithText({ imageSrc, text }) {
+function ImageWithText({ imageSrc, text , brightness = 100}) {
   return (
     <ImageContainer>
-      <Image src={imageSrc} alt="Paysage" />
+      <Image src={imageSrc} alt="Paysage"  brightness={brightness}/>
       <ImageText>{text}</ImageText>
     </ImageContainer>
   );

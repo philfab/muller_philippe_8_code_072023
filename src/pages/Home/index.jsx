@@ -19,6 +19,7 @@ function Home() {
       <ImageWithText
         imageSrc={landscape1}
         text="Chez vous, partout et ailleurs"
+        brightness={60}
       />
       <section className={styles.gridContainer}>
         {/* itère sur chaque elem  et retourne un composant Logement*/}

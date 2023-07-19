@@ -3,10 +3,10 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
     return (
-        <div className={styles.footer}>
+        <footer>
             <img src={logo} alt="Logo KASA"/>
-            <p className={styles.copyright}> © 2020 Kasa. All rights reserved</p>
-        </div>
+            <h4 className={styles.copyright}> © 2020 Kasa. All rights reserved</h4>
+        </footer>
     );
 };
 

@@ -1,8 +1,8 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin : 50px 5% 50px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 5% 50px 5%;
 }
 
 .logo {
@@ -10,8 +10,9 @@ header {
   width: auto;
 }
 
-.nonActiveLink, .activeLink {
-  color: #FF6060;
+.nonActiveLink,
+.activeLink {
+  color: var(--main-red);
   margin-left: 30px;
   font-size: 1.3rem;
 }
@@ -23,4 +24,3 @@ header {
 .nonActiveLink {
   text-decoration: none;
 }
-

@@ -1,17 +1,17 @@
 figure {
-  background-image: linear-gradient(white 40%,black);
+  background-image: linear-gradient(white 40%, black);
   border-radius: 10px;
 }
 
-figure img{
+figure img {
   border-radius: 10px 10px 0 0;
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-p{
-  margin: 1rem; 
-  color:white;
+figcaption {
+  padding: 10px;
+  color: white;
   font-size: 0.8rem;
 }

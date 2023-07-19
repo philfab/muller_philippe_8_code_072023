@@ -5,7 +5,7 @@ function Logement({ data }) {
     <figure className={styles.figure}>
       <img src={data.cover} alt={data.title} />
       <figcaption>
-        <p>{data.title}</p>
+        {data.title}
       </figcaption>
     </figure>
   );

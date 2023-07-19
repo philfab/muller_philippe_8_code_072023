@@ -1,0 +1,44 @@
+.container {
+  width: 75%;
+  height: auto;
+  border-radius: 5px;
+  background-color: var(--main-red);
+}
+
+.containerData {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.containerContent {
+  background-color: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.containerContent.open {
+  max-height: 300px; 
+}
+
+.title {
+  color: white;
+  margin: 10px;
+  font-size: 1.3rem;
+}
+
+.arrow {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: white;
+  margin: 10px;
+  font-size: 2rem;
+}
+
+.arrow.open {
+  transform: rotate(-180deg);
+}
