@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styles from "./Collapse.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +8,10 @@ const Collapse = ({ title, children }) => {
     <article className={styles.container}>
       <div className={styles.containerData}>
         <span className={styles.title}>{title}</span>
-        <FontAwesomeIcon
-          icon={faAngleUp}
-          className={`${styles.arrow} ${isOpen ? styles.open : ""}`}
+        <i
+          className={`fas fa-angle-up ${styles.arrow} ${
+            isOpen ? styles.open : ""
+          }`}
           onClick={() => setIsOpen(!isOpen)}
         />
       </div>
