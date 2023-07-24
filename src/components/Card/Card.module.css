@@ -1,4 +1,6 @@
 figure {
+  margin: 0;
+  padding: 0;
   background-image: linear-gradient(white 40%, black);
   border-radius: 10px;
 }
@@ -14,4 +16,8 @@ figcaption {
   padding: 10px;
   color: white;
   font-size: 0.8rem;
+}
+
+.link {
+  text-decoration: none;
 }

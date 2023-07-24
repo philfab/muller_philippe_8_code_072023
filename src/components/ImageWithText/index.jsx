@@ -14,20 +14,24 @@ const Image = styled.img`
   height: 180px;
   border-radius: 20px;
   object-fit: cover;
-  filter: brightness(${props => props.brightness}%);
+  filter: brightness(${(props) => props.brightness}%);
 `;
 
 const ImageText = styled.p`
   position: absolute;
   color: white;
-  font-size: 2rem;
+  font-size: 1.1rem;
   text-align: center;
+
+  @media screen and (min-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
-function ImageWithText({ imageSrc, text , brightness = 100}) {
+function ImageWithText({ imageSrc, text, brightness = 100 }) {
   return (
     <ImageContainer>
-      <Image src={imageSrc} alt="Paysage"  brightness={brightness}/>
+      <Image src={imageSrc} alt="Paysage" brightness={brightness} />
       <ImageText>{text}</ImageText>
     </ImageContainer>
   );

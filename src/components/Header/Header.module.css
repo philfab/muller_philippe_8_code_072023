@@ -1,3 +1,10 @@
+.nonActiveLink,
+.activeLink {
+  color: var(--main-red);
+  margin-left: 20px;
+  font-size: 1.1rem;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -6,15 +13,7 @@ header {
 }
 
 .logo {
-  height: 50px;
-  width: auto;
-}
-
-.nonActiveLink,
-.activeLink {
-  color: var(--main-red);
-  margin-left: 30px;
-  font-size: 1.3rem;
+  height: 30px;
 }
 
 .activeLink {
@@ -23,4 +22,16 @@ header {
 
 .nonActiveLink {
   text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  .logo {
+    height: 50px;
+  }
+
+  .nonActiveLink,
+  .activeLink {
+    margin-left: 30px;
+    font-size: 1.3rem;
+  }
 }

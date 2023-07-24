@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import FullCard from "./pages/FullCard";
 import Error from "./pages/Error";
 import "./global.css";
 
@@ -15,6 +16,8 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/card/:id" element={<FullCard />} />
+        <Route path="/error" element={<Error />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
