@@ -1,3 +1,34 @@
 .container {
-    margin: 20px 10%;
+  margin: 20px 10%;
+}
+.container p {
+  padding: 0;
+}
+
+.containerInfos {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0;
+  color: var(--main-red);
+}
+
+.title {
+  font-size: 1.4rem;
+}
+
+.location {
+  font-size: 0.8rem;
+  line-height: 0;
+}
+
+@media (max-width: 767px) {
+  .row {
+    flex-direction: column;
+  }
 }

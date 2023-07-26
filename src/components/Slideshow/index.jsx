@@ -30,7 +30,7 @@ function Slideshow({ images }) {
       <div className={styles.container}>
         {images.length === 1 && (
           <img
-            className={styles.currentSlide}
+            className={styles.currentPicture}
             src={images[currentSlide]}
             alt="Courante"
           />

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
 import data from "../../cardsList.json";
 import Slideshow from "../../components/Slideshow";
+import HostInfo from "../../components/HostInfo";
 
 function FullCard() {
   const { id } = useParams(); //hook qui récup les parametres de l'url. (déstructuration, idem à  id = useParams().id; )
@@ -12,7 +13,9 @@ function FullCard() {
   useEffect(() => {
     if (!card) {
       navigate("/error", {
-        state: { errorMessage: "Oups! Le logement que vous demandez n'existe pas." },
+        state: {
+          errorMessage: "Oups! Le logement que vous demandez n'existe pas.",
+        },
       });
     }
   }, [card, navigate]); //si card ou navigate changent useEffect est appelé
@@ -24,9 +27,16 @@ function FullCard() {
 
   return (
     <main className={styles.container}>
-    <Slideshow images={card.pictures} />
-      <h2>{card.title}</h2>
-      <p>{card.description}</p>
+      <Slideshow images={card.pictures} />
+      <section className={styles.containerInfos}>
+        <header className={styles.row}>
+          <p className={styles.title}>{card.title}</p>
+          <HostInfo host={card.host} />
+        </header>
+        <article>
+          <p className={styles.location}>{card.location}</p>
+        </article>
+      </section>
     </main>
   );
 }
