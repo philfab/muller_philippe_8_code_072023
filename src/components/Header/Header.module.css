@@ -2,18 +2,18 @@
 .activeLink {
   color: var(--main-red);
   margin-left: 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 5% 50px 5%;
+  margin: 50px 10% 50px 10%;
 }
 
 .logo {
-  height: 30px;
+  height: 25px;
 }
 
 .activeLink {
@@ -24,7 +24,7 @@ header {
   text-decoration: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 767px) {
   .logo {
     height: 50px;
   }

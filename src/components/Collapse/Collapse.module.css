@@ -1,28 +1,30 @@
 .container {
   width: 75%;
-  height: auto;
   border-radius: 5px;
-  background-color: var(--main-red);
+  background-color: #f6f6f6;
 }
 
 .containerData {
   margin: 0;
   display: flex;
+  border-radius: 5px;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+  background-color: var(--main-red);
 }
 
 .containerContent {
   background-color: #f6f6f6;
   border-radius: 0 0 5px 5px;
   max-height: 0;
+  opacity: 0.3;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: all 1s ease;
 }
 
 .containerContent.open {
-  max-height: 300px; 
+  max-height: 300px;
+  opacity: 1;
 }
 
 .title {

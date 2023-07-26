@@ -3,14 +3,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background-color: black;
   color: white;
   text-align: center;
   width: 100%;
 }
 
-
-footer img{
-  padding-top : 20px;
+footer img {
+  padding: 30px 0 20px;
 }

@@ -6,7 +6,7 @@ import Collapse from "../../components/Collapse";
 
 function About() {
   return (
-    <section>
+    <main>
       <ImageWithText imageSrc={landscape2} text="" brightness={100} />
       <article className={styles.container}>
         {aboutData.map((data, index) => (
@@ -15,7 +15,7 @@ function About() {
           </Collapse>
         ))}
       </article>
-    </section>
+    </main>
   );
 }
 

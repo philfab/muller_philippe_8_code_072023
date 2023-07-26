@@ -1,5 +1,5 @@
 figure {
-  margin: 0;
+  margin: 20px;
   padding: 0;
   background-image: linear-gradient(white 40%, black);
   border-radius: 10px;
@@ -8,7 +8,7 @@ figure {
 figure img {
   border-radius: 10px 10px 0 0;
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 

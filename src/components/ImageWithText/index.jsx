@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ImageContainer = styled.div`
-  width: 90%;
+  width: 80%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@ const ImageText = styled.p`
   font-size: 1.1rem;
   text-align: center;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 767px) {
     font-size: 2rem;
   }
 `;
