@@ -24,7 +24,6 @@
 
 .location {
   font-size: 0.8rem;
-  line-height: 0;
 }
 
 @media (max-width: 767px) {

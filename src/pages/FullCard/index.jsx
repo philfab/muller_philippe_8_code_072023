@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import data from "../../cardsList.json";
 import Slideshow from "../../components/Slideshow";
 import HostInfo from "../../components/HostInfo";
+import TagsList from "../../components/TagsList";
+import Rating from "../../components/Rating";
 
 function FullCard() {
   const { id } = useParams(); //hook qui récup les parametres de l'url. (déstructuration, idem à  id = useParams().id; )
@@ -33,9 +35,9 @@ function FullCard() {
           <p className={styles.title}>{card.title}</p>
           <HostInfo host={card.host} />
         </header>
-        <article>
-          <p className={styles.location}>{card.location}</p>
-        </article>
+        <p className={styles.location}>{card.location}</p>
+        <TagsList  tags={card.tags} />
+        <Rating rating={card.rating} />
       </section>
     </main>
   );
