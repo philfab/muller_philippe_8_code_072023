@@ -1,7 +1,6 @@
 .container {
   width: 75%;
   border-radius: 5px;
-  background-color: #f6f6f6;
 }
 
 .containerData {
@@ -16,14 +15,12 @@
 .containerContent {
   background-color: #f6f6f6;
   border-radius: 0 0 5px 5px;
-  max-height: 0;
   opacity: 0.3;
   overflow: hidden;
-  transition: all 1s ease;
+  transition: all 500ms ease;
 }
 
 .containerContent.open {
-  max-height: 300px;
   opacity: 1;
 }
 
@@ -39,6 +36,8 @@
   color: white;
   margin: 10px;
   font-size: 2rem;
+  text-align: right;
+  max-width: 28px;
 }
 
 .arrow.open {

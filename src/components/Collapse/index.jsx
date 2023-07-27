@@ -1,8 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect , useCallback} from "react";
 import styles from "./Collapse.module.css";
 
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef();
+  const [maxHeight, setMaxHeight] = useState("0px");
+
+  const resizeListener = useCallback(() => {
+    setMaxHeight(`${contentRef.current.scrollHeight}px`);
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      setMaxHeight(`${contentRef.current.scrollHeight}px`);
+      window.addEventListener("resize", resizeListener);
+    } else {
+      setMaxHeight("0px");
+      window.removeEventListener("resize", resizeListener);
+    }
+    return () => {
+      window.removeEventListener("resize", resizeListener);
+    };
+  }, [isOpen, resizeListener]);
+
 
   return (
     <article className={styles.container}>
@@ -17,6 +37,8 @@ const Collapse = ({ title, children }) => {
       </div>
       <div
         className={`${styles.containerContent} ${isOpen ? styles.open : ""}`}
+        style={{ maxHeight: isOpen ? maxHeight : "0px" }}
+        ref={contentRef}
       >
         {children}
       </div>

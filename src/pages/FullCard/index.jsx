@@ -6,11 +6,24 @@ import Slideshow from "../../components/Slideshow";
 import HostInfo from "../../components/HostInfo";
 import TagsList from "../../components/TagsList";
 import Rating from "../../components/Rating";
+import Collapse from "../../components/Collapse";
 
 function FullCard() {
   const { id } = useParams(); //hook qui récup les parametres de l'url. (déstructuration, idem à  id = useParams().id; )
   const card = data.find((card) => card.id === id); //recup la card par rapport à l'id
   const navigate = useNavigate(); //change de page programmatiquement
+  
+  const collapseData = [
+    { title: "Description", content: <p>{card.description}</p> },
+    {
+      title: "Equipements",
+      content: card.equipments.map((item, index) => (
+        <p className={styles.equipments} key={index}>
+          {item}
+        </p>
+      )),
+    },
+  ];
 
   useEffect(() => {
     if (!card) {
@@ -36,8 +49,15 @@ function FullCard() {
           <HostInfo host={card.host} />
         </header>
         <p className={styles.location}>{card.location}</p>
-        <TagsList  tags={card.tags} />
+        <TagsList tags={card.tags} />
         <Rating rating={card.rating} />
+        <article className={styles.containerCollapse}>
+          {collapseData.map((data, index) => (
+            <Collapse key={index} title={data.title}>
+              {data.content}
+            </Collapse>
+          ))}
+        </article>
       </section>
     </main>
   );
