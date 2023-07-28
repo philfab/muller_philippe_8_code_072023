@@ -1,10 +1,15 @@
-import React, { useState, useRef, useEffect , useCallback} from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import styles from "./Collapse.module.css";
+// import { debounce } from 'lodash';
 
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef();
   const [maxHeight, setMaxHeight] = useState("0px");
+
+  // const resizeListener = useCallback(debounce(() => {
+  //   setMaxHeight(`${content.current.scrollHeight}px`);
+  // }, 100), []);
 
   const resizeListener = useCallback(() => {
     setMaxHeight(`${contentRef.current.scrollHeight}px`);
@@ -22,7 +27,6 @@ const Collapse = ({ title, children }) => {
       window.removeEventListener("resize", resizeListener);
     };
   }, [isOpen, resizeListener]);
-
 
   return (
     <article className={styles.container}>
