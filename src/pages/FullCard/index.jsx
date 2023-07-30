@@ -56,33 +56,14 @@ function FullCard() {
           </article>
         </header>
         <section className={styles.containerFooter}>
-            {collapseData.map((data, index) => (
-              <Collapse key={index} title={data.title}>
-                {data.content}
-              </Collapse>
-            ))}
+          {collapseData.map((data, index) => (
+            <Collapse key={index} title={data.title}>
+              {data.content}
+            </Collapse>
+          ))}
         </section>
       </section>
     </main>
-    // <main className={styles.container}>
-    //   <Slideshow images={card.pictures} />
-    //   <section className={styles.containerInfos}>
-    //     <header className={styles.row}>
-    //       <p className={styles.title}>{card.title}</p>
-    //       <HostInfo host={card.host} />
-    //     </header>
-    //     <p className={styles.location}>{card.location}</p>
-    //     <TagsList tags={card.tags} />
-    //     <Rating rating={card.rating} />
-    //     <article className={styles.containerCollapse}>
-    //       {collapseData.map((data, index) => (
-    //         <Collapse key={index} title={data.title}>
-    //           {data.content}
-    //         </Collapse>
-    //       ))}
-    //     </article>
-    //   </section>
-    // </main>
   );
 }
 
