@@ -8,7 +8,7 @@ function Error() {
   // '?.' évite une erreur si state est undefined
   const errorMessage =
     location.state?.errorMessage ||
-    "Oups! La page que vous demandez n'existe pas.";
+    "Oups ! La page que vous demandez n'existe pas.";
 
   return (
     <section className={styles.error}>

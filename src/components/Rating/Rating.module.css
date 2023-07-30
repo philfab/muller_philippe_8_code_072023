@@ -10,3 +10,11 @@
 .gray {
   color: gray;
 }
+
+
+@media (max-width: 1199px) {
+  .star {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+}

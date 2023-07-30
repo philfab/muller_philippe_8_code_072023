@@ -13,6 +13,21 @@ function FullCard() {
   const card = data.find((card) => card.id === id); //recup la card par rapport à l'id
   const navigate = useNavigate(); //change de page programmatiquement
 
+  useEffect(() => {
+    if (!card) {
+      navigate("/error", {
+        state: {
+          errorMessage: "Oups ! Le logement que vous demandez n'existe pas.",
+        },
+      });
+    }
+  }, [card, navigate]); //si card ou navigate changent useEffect est appelé
+
+  //au cas oû le composant essaie un rendu avant navigate vers la page error
+  if (!card) {
+    return null;
+  }
+
   const collapseData = [
     { title: "Description", content: <p>{card.description}</p> },
     {
@@ -24,21 +39,6 @@ function FullCard() {
       )),
     },
   ];
-
-  useEffect(() => {
-    if (!card) {
-      navigate("/error", {
-        state: {
-          errorMessage: "Oups! Le logement que vous demandez n'existe pas.",
-        },
-      });
-    }
-  }, [card, navigate]); //si card ou navigate changent useEffect est appelé
-
-  //au cas oû le composant essaie un rendu avant navigate vers la page error
-  if (!card) {
-    return null;
-  }
 
   return (
     <main className={styles.container}>

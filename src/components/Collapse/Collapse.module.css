@@ -43,3 +43,9 @@
 .arrow.open {
   transform: rotate(-180deg);
 }
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: 1.1rem;
+  }
+}
