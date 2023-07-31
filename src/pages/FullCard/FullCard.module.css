@@ -70,9 +70,15 @@
 }
 
 @media (max-width: 767px) {
+
+  .container {
+    margin: 20px 5%;
+  }
+
   .containerHeader {
     flex-direction: column;
   }
+
   .containerRight {
     flex-direction: row-reverse;
     justify-content: space-between;

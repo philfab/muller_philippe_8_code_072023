@@ -1,8 +1,8 @@
 .nonActiveLink,
 .activeLink {
   color: var(--main-red);
-  margin-left: 20px;
-  font-size: 1rem;
+  margin-left: 30px;
+  font-size: 1.3rem;
 }
 
 header {
@@ -13,7 +13,7 @@ header {
 }
 
 .logo {
-  height: 25px;
+  height: 50px;
 }
 
 .activeLink {
@@ -24,14 +24,18 @@ header {
   text-decoration: none;
 }
 
-@media screen and (min-width: 767px) {
+@media (max-width: 767px) {
   .logo {
-    height: 50px;
+    height: 25px;
   }
 
   .nonActiveLink,
   .activeLink {
-    margin-left: 30px;
-    font-size: 1.3rem;
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+
+  header {
+    margin: 50px 5% 50px 5%;
   }
 }

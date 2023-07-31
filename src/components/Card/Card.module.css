@@ -15,6 +15,9 @@ figure img {
 }
 
 figcaption {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -24,18 +27,16 @@ figcaption {
   font-size: 0.8rem;
   background-color: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
+  min-height: 15%;
+  max-height: 15%;
 }
 
 .link {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
   figure img {
     height: 250px;
-  }
-
-  figcaption {
-    font-size: 0.7rem;
   }
 }

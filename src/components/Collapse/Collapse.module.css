@@ -1,5 +1,5 @@
 .container {
-  width: 75%;
+  width: 80%;
   border-radius: 5px;
 }
 
@@ -47,5 +47,11 @@
 @media (max-width: 1199px) {
   .title {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
   }
 }

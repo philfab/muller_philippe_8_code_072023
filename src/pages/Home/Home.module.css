@@ -8,15 +8,21 @@
   border-radius: 15px;
 }
 
-@media screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .gridContainer { 
-    padding: 10PX;
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
+
   .gridContainer {
     grid-template-columns: repeat(1, 1fr);
+    margin: 20px 5%;
+    padding: 0;
+    gap: 10px;
+    background: transparent;
   }
 }

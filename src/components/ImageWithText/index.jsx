@@ -7,6 +7,10 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+
+  @media (max-width: 767px) {
+    width: 90%;
+  }
 `;
 
 const Image = styled.img`
@@ -20,11 +24,11 @@ const Image = styled.img`
 const ImageText = styled.p`
   position: absolute;
   color: white;
-  font-size: 1.1rem;
+  font-size: 2rem;
   text-align: center;
 
-  @media screen and (min-width: 767px) {
-    font-size: 2rem;
+  @media (max-width: 767px) {
+    font-size: 1.1rem;
   }
 `;
 
