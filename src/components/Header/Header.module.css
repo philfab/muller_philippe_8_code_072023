@@ -1,0 +1,41 @@
+.nonActiveLink,
+.activeLink {
+  color: var(--main-red);
+  margin-left: 30px;
+  font-size: 1.3rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 10% 50px 10%;
+}
+
+.logo {
+  height: 50px;
+}
+
+.activeLink {
+  text-decoration: underline;
+}
+
+.nonActiveLink {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    height: 25px;
+  }
+
+  .nonActiveLink,
+  .activeLink {
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+
+  header {
+    margin: 50px 5% 50px 5%;
+  }
+}

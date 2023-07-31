@@ -1,0 +1,57 @@
+.container {
+  width: 80%;
+  border-radius: 5px;
+}
+
+.containerData {
+  margin: 0;
+  display: flex;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-red);
+}
+
+.containerContent {
+  background-color: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  opacity: 0.3;
+  overflow: hidden;
+  transition: all 500ms ease;
+}
+
+.containerContent.open {
+  opacity: 1;
+}
+
+.title {
+  color: white;
+  margin: 10px;
+  font-size: 1.3rem;
+}
+
+.arrow {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: white;
+  margin: 10px;
+  font-size: 2rem;
+  text-align: right;
+  max-width: 28px;
+}
+
+.arrow.open {
+  transform: rotate(-180deg);
+}
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
